@@ -52,19 +52,19 @@ a:hover{
     padding: 20px;
     background: #00180ac8;
     display: block;
-    border: 1px solid rgba(9, 233, 13, 0.888);
+    border: 1px solid #00180ac8;
     font-weight: bold;
     font-size: 18px;
 }
 .selected{
     font-size: 18px;
     padding: 20px;
-    border: 1px solid rgb(9, 233, 13, 0.888);
+    border: 1px solid #00180ac8;
     font-weight: bold;
     background: #7df0bcc8;
 }
 .main li{
-    border: 1px solid #7df0bcc8;
+    border: 1px solid #00180ac8;
     margin-bottom: 40px;
 }
 .image{
@@ -93,4 +93,20 @@ a:hover{
 }
 .post{
     font-size: 16px;
+}
+.form-input{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+button{
+    background: #7df0bcc8;
+    border: 2px solid #00180ac8;
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+form label{
+    font-size: 18px;
 }
