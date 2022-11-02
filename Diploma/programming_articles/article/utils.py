@@ -1,15 +1,18 @@
+from django.db.models import Count
 from .models import *
 
 menu = [
     {'title': 'Добавить статью', 'url_name': 'add_page'},
-    {'title': 'Войти', 'url_name': 'index'}
+
 ]
 
 
 class DataMixin:
+    paginate_by = 2
+
     def get_user_context(self, **kwargs):
         context = kwargs
-        cats = Category.objects.all()
+        cats = Category.objects.annotate(Count('article'))
 
         user_menu = menu.copy()
         if not self.request.user.is_authenticated:

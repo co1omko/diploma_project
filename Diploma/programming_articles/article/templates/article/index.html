@@ -1,5 +1,6 @@
 {% extends "article/base.html" %}
 {% block content %}
+{% load static %}
 <h1>{{ title }}</h1>
 <ul>
     {% for p in posts %}
@@ -8,6 +9,8 @@
         <div class="text">
             {% if p.photo %}
             <img src="{{ p.photo.url }}" class="image" alt="">
+            {% else %}
+            <img src="{% static 'article/default.jpg' %}" class="image" alt="">
             {% endif %}
 
         <h2><a href="{{ p.get_absolut_url }}">{{ p.title }}</a></h2>
